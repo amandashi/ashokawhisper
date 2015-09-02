@@ -1,0 +1,1 @@
+Yaks=new Mongo.Collection("yaks"),Router.route("/",{name:"yaksList"}),Router.route("/submit",{name:"yaksSubmit"}),Router.route("/login",{name:"accounts"}),Comments=new Mongo.Collection("comments"),Router.route("/yaks/:_id",{name:"yakPage",data:function(){return Yaks.findOne(this.params._id)}});

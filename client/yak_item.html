@@ -1,0 +1,22 @@
+<template name="yakItem">
+	<div class="yak">
+		<li class="list-group-item">
+			<div class="yakPost">
+				<p class="break-el">{{yak}}</p>
+			{{#if currentUser}}
+				<a class="btn" href="{{pathFor 'yakPage'}}">
+			{{commentsCount}} comments</a>
+				<a class="btn pull-right btn-small no" id="downvote" href="#"><i class="fa fa-chevron-down"></i></a>
+				<p class="btn pull-right" id= "score"> {{score}} </p>
+				<a class="btn pull-right btn-small yes" id="upvote" href="#"><i class="fa fa-chevron-up"></i></a>
+			{{else}}
+				<a class="btn" href="{{pathFor 'yakPage'}}">
+			{{commentsCount}} comments </a>
+				<a class="btn pull-right btn-small" id="downvote" href="{{pathFor 'accounts'}}"><i class="fa fa-chevron-down"></i></a>
+				<a class="btn pull-right" id="score" href="#"> {{score}} </a>
+				<a class="btn pull-right btn-small" id="upvote" href="{{pathFor 'accounts'}}"><i class="fa fa-chevron-up"></i></a>
+			{{/if}}
+			</div>
+		</li>
+	</div>
+</template>

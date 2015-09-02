@@ -1,0 +1,1 @@
+Meteor.methods({yakInsert:function(e){Yaks.insert({yak:e,score:0,submitted:new Date})},commentInsert:function(e){Comments.insert(e)}});

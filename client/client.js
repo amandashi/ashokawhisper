@@ -1,0 +1,1 @@
+Template.yaksList.helpers({yaks:function(){return Yaks.find({},{sort:{score:-1}})}}),Accounts.ui.config({passwordSignupFields:"USERNAME_ONLY"});

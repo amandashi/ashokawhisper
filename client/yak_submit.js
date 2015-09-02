@@ -1,0 +1,1 @@
+Template.yaksSubmit.events({"submit .yaksSubmitForm":function(t){t.preventDefault();var e=t.target.yak.value;""==e?alert("You can't insert an empty yak. Type something."):(Meteor.call("yakInsert",e),Router.go("yaksList"))}});

@@ -1,0 +1,1 @@
+Template.commentSubmit.events({"submit form":function(t,e){t.preventDefault();var a=$(t.target).find("[name=body]"),n={body:a.val(),postId:e.data._id,submitted:new Date},m=t.target.body.value;""==m?alert("You can't insert empty comment. Try again!"):Meteor.call("commentInsert",n),t.target.body.value=""}});
